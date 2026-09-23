@@ -1,0 +1,192 @@
+.shell {
+  --surface: #101412;
+  --side: #151b17;
+  --text: #f2f3eb;
+  --body-text: #b1bdb2;
+  --nav-text: #a0afa2;
+  --muted-text: #8fa28f;
+  --highlight: #d9fb65;
+  --line: #344036;
+  --hover: #202a22;
+  --selected: #273426;
+  --selected-line: #5a7544;
+  --card-bg: #1b241d;
+  --glow: #b4e85a36;
+  --orbit: #b0d17744;
+  --grid-line: #bff58a0c;
+  --face-hi: #38503e;
+  --face-lo: #101b15;
+  --face-border: #94b776;
+  --face-text: #edffc6;
+  --face-sub: #bddca6;
+  --face-side: #78945d;
+  --face-top: #a3bb79;
+  --label-bg: #1b291ecc;
+  --label-border: #576b4c;
+  --label-text: #c5d5bb;
+  --button-text: #111a12;
+  --button-hover: #f2ffb8;
+  background: var(--surface);
+  color: var(--text);
+  transition: background-color .45s, color .45s
+}
+
+.theme-about {
+  --surface: #f1eadb;
+  --side: #e3d9c6;
+  --text: #292c2a;
+  --body-text: #4c5650;
+  --nav-text: #59635b;
+  --muted-text: #657065;
+  --highlight: #a74123;
+  --line: #baad95;
+  --hover: #d5c9b3;
+  --selected: #f8ede0;
+  --selected-line: #a74123;
+  --card-bg: #e6dac7;
+  --button-text: #fff8ed;
+  --button-hover: #c65a37;
+  --glow: #da713137;
+  --orbit: #b8584259;
+  --grid-line: #a741231c;
+  --face-hi: #bd6b46;
+  --face-lo: #5d392f;
+  --face-border: #a74123;
+  --face-text: #fff1d5;
+  --face-sub: #f1d5bd;
+  --face-side: #8e4a34;
+  --face-top: #d78a59;
+  --label-bg: #f2e3d8dd;
+  --label-border: #b27259;
+  --label-text: #613c30
+}
+
+.theme-experience {
+  --surface: #091b2a;
+  --side: #10283a;
+  --text: #e9f7ff;
+  --body-text: #b3d0dc;
+  --nav-text: #a5bdc9;
+  --muted-text: #8eacbb;
+  --highlight: #4de1d0;
+  --line: #365567;
+  --hover: #19384a;
+  --selected: #174350;
+  --selected-line: #4de1d0;
+  --card-bg: #143144;
+  --button-text: #09232b;
+  --button-hover: #8bf7e8;
+  --glow: #31c2de40;
+  --orbit: #5ddde755;
+  --grid-line: #4de1d019;
+  --face-hi: #277986;
+  --face-lo: #0c3548;
+  --face-border: #4de1d0;
+  --face-text: #d8fffb;
+  --face-sub: #a5eee6;
+  --face-side: #237080;
+  --face-top: #67c9d0;
+  --label-bg: #123b4bdc;
+  --label-border: #50aeb9;
+  --label-text: #bceef1
+}
+
+.theme-projects {
+  --surface: #1a1426;
+  --side: #251b33;
+  --text: #f7efff;
+  --body-text: #c9bbd8;
+  --nav-text: #b2a1c7;
+  --muted-text: #a898bf;
+  --highlight: #d9a2ff;
+  --line: #51405f;
+  --hover: #352745;
+  --selected: #422d51;
+  --selected-line: #d9a2ff;
+  --card-bg: #2b203b;
+  --button-text: #25132f;
+  --button-hover: #f0c9ff;
+  --glow: #b877f644;
+  --orbit: #c992eb55;
+  --grid-line: #d9a2ff1c;
+  --face-hi: #764e99;
+  --face-lo: #2c1d45;
+  --face-border: #d9a2ff;
+  --face-text: #f5ddff;
+  --face-sub: #e2baf2;
+  --face-side: #6a4385;
+  --face-top: #b988d4;
+  --label-bg: #39254fdd;
+  --label-border: #9c70b6;
+  --label-text: #ebcaff
+}
+
+.theme-contact {
+  --surface: #271a18;
+  --side: #33211e;
+  --text: #fff1e5;
+  --body-text: #dfc6b6;
+  --nav-text: #cbb1a3;
+  --muted-text: #bea396;
+  --highlight: #ffb58d;
+  --line: #64463d;
+  --hover: #432c28;
+  --selected: #57372f;
+  --selected-line: #ffb58d;
+  --card-bg: #3b2824;
+  --button-text: #301d19;
+  --button-hover: #ffd2b7;
+  --glow: #ed936044;
+  --orbit: #e5aa8055;
+  --grid-line: #ffb58d1c;
+  --face-hi: #a7644c;
+  --face-lo: #4f2b29;
+  --face-border: #ffb58d;
+  --face-text: #fff0d9;
+  --face-sub: #f1ccb1;
+  --face-side: #884f3d;
+  --face-top: #d89671;
+  --label-bg: #52322bdd;
+  --label-border: #bd856a;
+  --label-text: #f8d5bb
+}
+
+body {
+  background: #101412
+}
+
+.brand {
+  color: var(--text)
+}
+
+.sidebar nav button.active {
+  color: var(--highlight)
+}
+
+.sidebar nav button.active small {
+  color: var(--highlight)
+}
+
+.section h2,
+.intro h1 {
+  color: var(--text)
+}
+
+.facts strong,
+.timeline h3,
+.projects h3,
+.links a {
+  color: var(--text)
+}
+
+.projects article {
+  background: var(--card-bg)
+}
+
+.sidebar {
+  transition: background-color .45s, border-color .45s
+}
+
+.content {
+  transition: color .45s
+}
