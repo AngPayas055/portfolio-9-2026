@@ -82,7 +82,7 @@ em {
   position: relative;
   display: grid;
   place-items: center;
-  overflow: hidden
+  overflow: visible;
 }
 
 .visual:before {
@@ -108,6 +108,15 @@ em {
   width: 270px;
   height: 270px;
   border-style: dashed
+}
+
+.cube-tilt {
+  --mouse-x: 0deg;
+  --mouse-y: 0deg;
+
+  transform-style: preserve-3d;
+  transform: rotateY(var(--mouse-x)) rotateX(var(--mouse-y));
+  transition: transform 180ms ease-out;
 }
 
 .cube {
