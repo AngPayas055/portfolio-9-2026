@@ -7,18 +7,8 @@ import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import About from "./components/About";
 import HomeHero from "./components/Home";
-import Sidebar from "./components/Sidebar";
+import Sidebar, { type Section } from "./components/Sidebar";
 import LoadingScreen from "./components/LoadingScreen";
-
-const sections = [
-  "Home",
-  "About",
-  "Experience",
-  "Projects",
-  "Contact",
-] as const;
-
-type Section = (typeof sections)[number];
 
 export default function Home() {
   const [active, setActive] = useState<Section>("Home");
