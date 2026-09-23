@@ -1,0 +1,9 @@
+.section {
+  min-height: calc(100vh - 162px);
+  padding: 90px 0 100px;
+  max-width: 1100px
+}
+
+.section h2 {
+  margin-bottom: 55px
+}

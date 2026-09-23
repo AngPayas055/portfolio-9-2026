@@ -1,0 +1,23 @@
+.links {
+  max-width: 680px;
+  margin-top: 50px;
+  border-top: 1px solid var(--line)
+}
+
+.links a {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  padding: 22px 4px;
+  font-size: 19px
+}
+
+.links a svg:last-child {
+  margin-left: auto;
+  color: var(--highlight)
+}
+
+.links a:hover {
+  color: var(--highlight)
+}

@@ -1,0 +1,27 @@
+.content {
+  padding: 0 clamp(30px, 5vw, 90px);
+  display: flex;
+  flex-direction: column;
+  min-width: 0
+}
+
+.content header,
+.content footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  color: var(--muted-text);
+  font: 11px monospace;
+  letter-spacing: .13em
+}
+
+.content header {
+  padding: 37px 0;
+  border-bottom: 1px solid var(--line)
+}
+
+.content footer {
+  padding: 26px 0;
+  border-top: 1px solid var(--line);
+  margin-top: auto
+}

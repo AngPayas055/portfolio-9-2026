@@ -1,0 +1,236 @@
+/* Intro: an actual six-sided CSS 3D monogram, with a quick accessible exit. */
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  background: #0d1511;
+  color: #ecf5e6;
+  overflow: hidden;
+  isolation: isolate
+}
+
+.loading-screen:before {
+  content: "";
+  position: absolute;
+  inset: -25%;
+  background: radial-gradient(circle at 50% 47%, #557c3a55 0, transparent 37%), radial-gradient(circle at 15% 85%, #1c523044 0, transparent 25%);
+  animation: loading-breathe 2.3s ease-in-out infinite alternate
+}
+
+.loading-grain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(#d9fb650a 1px, transparent 1px), linear-gradient(90deg, #d9fb650a 1px, transparent 1px);
+  background-size: 38px 38px;
+  mask-image: linear-gradient(to bottom, transparent, #000 30%, #000 70%, transparent)
+}
+
+.loading-content {
+  width: min(440px, calc(100vw - 48px));
+  position: relative;
+  z-index: 1
+}
+
+.loading-overline {
+  display: block;
+  color: #a6bb9d;
+  text-align: center;
+  font: 11px monospace;
+  letter-spacing: .22em
+}
+
+.loading-perspective {
+  height: 300px;
+  perspective: 780px;
+  display: grid;
+  place-items: center;
+  position: relative
+}
+
+.loading-halo {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border: 1px solid #b5ee8655;
+  border-radius: 50%;
+  transform: rotateX(70deg);
+  box-shadow: 0 0 60px #a4e25e1c;
+  animation: halo 2.3s ease-in-out infinite alternate
+}
+
+.loading-cube {
+  width: 140px;
+  height: 140px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: loading-spin 2.3s cubic-bezier(.3, .1, .65, 1) both
+}
+
+.loading-face {
+  position: absolute;
+  inset: 0;
+  border: 1px solid #bcf58a;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(145deg, #43643c, #14291e);
+  color: #eaffd2;
+  font-size: 45px;
+  font-weight: 900;
+  letter-spacing: -.13em;
+  backface-visibility: hidden;
+  box-shadow: inset 0 0 30px #c8ff9418
+}
+
+.loading-face span {
+  color: #d9fb65
+}
+
+.loading-front {
+  transform: translateZ(70px)
+}
+
+.loading-back {
+  transform: rotateY(180deg) translateZ(70px)
+}
+
+.loading-right {
+  transform: rotateY(90deg) translateZ(70px);
+  background: #4a7048
+}
+
+.loading-left {
+  transform: rotateY(-90deg) translateZ(70px);
+  background: #36563c
+}
+
+.loading-top {
+  transform: rotateX(90deg) translateZ(70px);
+  background: #719358;
+  color: #d9fb65
+}
+
+.loading-cube-bottom {
+  transform: rotateX(-90deg) translateZ(70px);
+  background: #27452e;
+  color: #d9fb65
+}
+
+.loading-bottom {
+  display: flex;
+  justify-content: space-between;
+  color: #c1d5b8;
+  font: 11px monospace;
+  letter-spacing: .14em
+}
+
+.loading-track {
+  height: 2px;
+  background: #4a6145;
+  margin-top: 15px;
+  overflow: hidden
+}
+
+.loading-track span {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: #d9fb65;
+  box-shadow: 0 0 16px #d9fb65;
+  animation: loadbar 2.25s linear forwards
+}
+
+.loading-skip {
+  position: absolute;
+  right: clamp(20px, 4vw, 55px);
+  bottom: clamp(20px, 4vw, 45px);
+  border: 1px solid #72916a;
+  color: #daedcf;
+  background: #1b2b20;
+  padding: 11px 15px;
+  font: 12px monospace;
+  z-index: 2
+}
+
+.loading-skip:hover {
+  background: #d9fb65;
+  color: #142016
+}
+
+.loading-skip:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 3px
+}
+
+@keyframes loading-spin {
+  0% {
+    transform: rotateX(-18deg) rotateY(-45deg) scale(.65);
+    opacity: .25
+  }
+
+  25% {
+    opacity: 1
+  }
+
+  100% {
+    transform: rotateX(338deg) rotateY(675deg) scale(1)
+  }
+}
+
+@keyframes halo {
+  to {
+    transform: rotateX(70deg) rotateZ(180deg) scale(1.16);
+    opacity: .5
+  }
+}
+
+@keyframes loading-breathe {
+  to {
+    transform: scale(1.15)
+  }
+}
+
+@keyframes loadbar {
+  to {
+    width: 100%
+  }
+}
+
+@media(max-width:700px) {
+  .loading-perspective {
+    height: 260px
+  }
+
+  .loading-cube {
+    scale: .8
+  }
+
+  .loading-halo {
+    width: 210px;
+    height: 210px
+  }
+
+  .loading-overline {
+    font-size: 10px
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+  .loading-screen:before,
+  .loading-halo,
+  .loading-cube,
+  .loading-track span {
+    animation: none !important
+  }
+
+  .loading-cube {
+    transform: rotateX(-18deg) rotateY(-35deg)
+  }
+
+  .loading-track span {
+    width: 100%
+  }
+}

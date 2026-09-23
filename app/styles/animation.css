@@ -1,0 +1,5 @@
+@keyframes floatturn {
+  to {
+    transform: translateY(-20px) rotateY(-10deg) rotateX(13deg) rotateZ(-4deg)
+  }
+}

@@ -1,0 +1,45 @@
+.about {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: clamp(40px, 8vw, 120px)
+}
+
+.about p,
+.contact p {
+  color: var(--body-text);
+  font-size: 17px;
+  line-height: 1.8
+}
+
+.about .lead,
+.contact .lead {
+  color: var(--text);
+  font-size: 23px;
+  line-height: 1.55
+}
+
+.facts {
+  border-top: 1px solid var(--line)
+}
+
+.facts>div {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 8px
+}
+
+.facts small,
+.timeline small,
+.projecttop small,
+.projects article>small {
+  color: var(--muted-text);
+  font: 11px monospace;
+  letter-spacing: .1em
+}
+
+.facts strong {
+  font-size: 17px;
+  font-weight: 500
+}

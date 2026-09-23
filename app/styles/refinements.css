@@ -1,0 +1,72 @@
+.timeline article {
+  grid-template-columns: 55px minmax(0, 1fr) minmax(130px, auto)
+}
+
+.timeline .period {
+  text-align: right;
+  white-space: nowrap
+}
+
+.timeline article>div {
+  min-width: 0
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 18px
+}
+
+.tech-list span {
+  display: inline-block;
+  border: 1px solid var(--line);
+  background: var(--selected);
+  color: var(--text);
+  padding: 6px 9px;
+  font: 12px/1.25 monospace;
+  letter-spacing: 0
+}
+
+.projects article {
+  min-height: 360px;
+  gap: 22px
+}
+
+.projects article .tech-list {
+  margin-top: 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--line)
+}
+
+.projects article p {
+  display: block;
+  overflow: visible
+}
+
+.projects article:focus-within {
+  border-color: var(--highlight)
+}
+
+.projects article h3 a:hover {
+  color: var(--highlight)
+}
+
+@media(max-width:700px) {
+  .timeline article {
+    grid-template-columns: 30px minmax(0, 1fr)
+  }
+
+  .timeline .period {
+    text-align: left;
+    grid-column: 2
+  }
+
+  .projects article {
+    min-height: 320px
+  }
+
+  .projects article p {
+    display: block
+  }
+}
