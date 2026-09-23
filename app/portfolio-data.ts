@@ -69,7 +69,7 @@ export const projects = [
   },
   {
     title: "SmartCompose",
-    link: "https://smart-compose.vercel.app/home",
+    link: "https://smart-compose.vercel.app",
     image: "/projects/demo.gif",
     description: "SmartCompose is a full-stack web application built with Next.js, Express.js, and MongoDB. It leverages the OpenAI API to generate customized messages based on user-selected settings. Key features include user registration, login, password recovery, and account verification. Email functionalities are managed using Amazon SES, facilitating secure password recovery and user verification processes.",
     tech: ["NextJs", "Tailwind", "Ant.design", "Express TypeScript", "Amazon SES", "OpenAI"],
